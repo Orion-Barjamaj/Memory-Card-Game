@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+.cardContainer{
+    display: flex;
+    height: 280px;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: 280px;
+    width: 200px;
+    display: flex;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner{
+    transform-style: preserve-3d;
+    transition: 0.6s;
+	position: relative;
+    transform: rotateY(180deg);
+}
+
+.animate{
+    transition: 0.6s;
+    transform: rotateY(0deg);
+}
+
+.frontCard, .backCard {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    -webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+
+.frontCard{
+    border-radius: 15px;
+    height: 280px;
+    width: 200px;
+    background-color: #DEE7E7;
+    transform: rotateY(0deg);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    gap: 30px;
+}
+
+.backCard{
+    position: relative;
+    bottom: 280px;
+    transform: rotateY(180deg);
+    height: 280px;
+    width: 200px;
+    border-radius: 15px;
+    background-color: #B7ADCF;
+}
+
+.cardImg{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.standName{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
