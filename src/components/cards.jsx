@@ -10,7 +10,6 @@ function Card({ id, name, src, changeCards, addToScore, gameOver}) {
 
     const addScore = () => {
         const rightChar = characters.find((char) => char.id === id);
-        console.log(rightChar.name, rightChar.clicked);
         if(rightChar.clicked === true){
             characters.forEach((char) => char.clicked = false);
             gameOver();
